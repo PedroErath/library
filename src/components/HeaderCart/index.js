@@ -1,13 +1,13 @@
-import { RiShoppingCart2Fill } from 'react-icons/ri'
+import { HiOutlineShoppingCart } from 'react-icons/hi'
 
 export default function HeaderCart() {
     return (
-        <div className='flex items-center'>
+        <div className='flex items-center ml-4'>
             <div>
                 <h2 className='text-2xl font-bold text-orange-700'>R$ 384,00</h2>
-                <p className='text-green-700'>3 items</p>
+                <p className='text-green-700 text-lg'>3 items</p>
             </div>
-            <RiShoppingCart2Fill size={80} color='rgb(21, 128, 61)' />
+            <HiOutlineShoppingCart size={80} color='rgb(21, 128, 61)' />
         </div>
     )
 }
