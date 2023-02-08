@@ -1,9 +1,11 @@
 import { RiAccountCircleLine } from 'react-icons/ri'
+import { ImBooks } from 'react-icons/im'
 import { CgDarkMode } from 'react-icons/cg'
+import { BiHeartCircle } from 'react-icons/bi'
 import HeaderCart from '../HeaderCart'
 import SearchBar from '../SearchBar'
 
-export default function Header({ logged }) {
+export default function Header({ typeUserLogged }) {
     return (
         <header className="bg-amber-400 p-4">
             <div className="max-w-screen-xl m-auto">
@@ -13,8 +15,15 @@ export default function Header({ logged }) {
                         <h1 className="text-5xl font-bold">LIBRARY</h1>
                     </div>
                     <div className='flex items-center ml-2'>
-                        <p className='text-lg'>Login</p>
+                        <p className='text-lg font-medium'>Login</p>
                         <RiAccountCircleLine size={50} />
+                        {
+                            typeUserLogged === 'C'
+                                ? <BiHeartCircle size={50} />
+                                : typeUserLogged === 'E'
+                                    ? <ImBooks size={50} />
+                                    : null
+                        }
                         <CgDarkMode size={50} />
                     </div>
                 </div>
