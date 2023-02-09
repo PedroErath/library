@@ -29,7 +29,7 @@ export default function Header({ typeUserLogged }) {
                 </div>
                 <div className='flex flex-wrap items-center justify-center md:justify-between md:h-16 mt-5 md:mt-0 h-24'>
                     <SearchBar />
-                    <HeaderCart />
+                    { typeUserLogged === 'C' ? <HeaderCart /> : null}
                 </div>
             </div>
         </header>
