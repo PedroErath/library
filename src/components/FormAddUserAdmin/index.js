@@ -9,9 +9,9 @@ export default function FormAddUserAdmin () {
         </div>
         <form>
             <TextInput label='Nome' placeholder='Digite o nome do usuário' />
-            <TextInput label='email' placeholder='Digite o email do usuário' />
-            <TextInput label='senha' placeholder='Digite a senha do usuário' />
-            <TextInput label='tipo' placeholder='Digite o tipó do usuário' />
+            <TextInput label='Email' placeholder='Digite o email do usuário' />
+            <TextInput label='Senha' placeholder='Digite a senha do usuário' />
+            <TextInput label='Tipo' placeholder='Digite o tipó do usuário' />
         </form>
         <Button>
             ADICIONAR

@@ -7,7 +7,7 @@ import SearchBar from '../SearchBar'
 
 export default function Header({ typeUserLogged }) {
     return (
-        <header className="bg-amber-400 p-4">
+        <header className="bg-amber-400 p-4" id='top'>
             <div className="max-w-screen-xl m-auto">
                 <div className="flex flex-1 flex-wrap justify-center sm:justify-between">
                     <div className='flex items-center'>

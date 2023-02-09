@@ -9,8 +9,8 @@ export default function FormAddUser () {
         </div>
         <form>
             <TextInput label='Nome' placeholder='Digite o nome do usuário' />
-            <TextInput label='email' placeholder='Digite o email do usuário' />
-            <TextInput label='senha' placeholder='Digite a senha do usuário' />
+            <TextInput label='Email' placeholder='Digite o email do usuário' />
+            <TextInput label='Senha' placeholder='Digite a senha do usuário' />
         </form>
         <Button>
             CADASTRAR

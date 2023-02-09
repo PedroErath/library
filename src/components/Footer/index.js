@@ -1,6 +1,15 @@
 import { BiMap, BiUpArrowAlt } from 'react-icons/bi'
 
 export default function Footer() {
+
+    const BackToTop = (e) => {
+        e.preventDefault()
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
     return (
         <footer className='bg-amber-400 p-4'>
             <div className='flex flex-wrap items-center justify-center sm:justify-between m-auto max-w-screen-xl'>
@@ -15,7 +24,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <button className='flex items-center ml-4 mt-5 sm:mt-0'>
+                <button onClick={e => BackToTop(e)} className='flex items-center ml-4 mt-5 sm:mt-0'>
                     <h2 className='text-xl'>Voltar ao topo</h2>
                     <BiUpArrowAlt size={40} />
                 </button>
