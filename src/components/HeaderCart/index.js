@@ -1,6 +1,6 @@
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 
-export default function HeaderCart() {
+export default function HeaderCart({userId}) {
     return (
         <div className='flex items-center ml-4'>
             <div>

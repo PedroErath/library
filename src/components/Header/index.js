@@ -5,7 +5,7 @@ import { BiHeartCircle } from 'react-icons/bi'
 import HeaderCart from '../HeaderCart'
 import SearchBar from '../SearchBar'
 
-export default function Header({ typeUserLogged }) {
+export default function Header({ userLogged }) {
     return (
         <header className="bg-amber-400 p-4" id='top'>
             <div className="max-w-screen-xl m-auto">
@@ -15,12 +15,12 @@ export default function Header({ typeUserLogged }) {
                         <h1 className="text-5xl font-bold">LIBRARY</h1>
                     </div>
                     <div className='flex items-center ml-2'>
-                        <p className='text-lg font-medium'>Login</p>
+                        <p className='text-lg font-medium'>{userLogged?.name || 'Login'}</p>
                         <RiAccountCircleLine size={50} />
                         {
-                            typeUserLogged === 'C'
+                            userLogged?.type === 'C'
                                 ? <BiHeartCircle size={50} />
-                                : typeUserLogged === 'E'
+                                : userLogged?.type === 'E'
                                     ? <ImBooks size={50} />
                                     : null
                         }
@@ -29,7 +29,7 @@ export default function Header({ typeUserLogged }) {
                 </div>
                 <div className='flex flex-wrap items-center justify-center md:justify-between md:h-16 mt-5 md:mt-0 h-24'>
                     <SearchBar />
-                    { typeUserLogged === 'C' ? <HeaderCart /> : null}
+                    { userLogged?.type === 'C' ? <HeaderCart /> : null}
                 </div>
             </div>
         </header>
