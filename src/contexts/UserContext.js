@@ -8,6 +8,7 @@ export function UserProvider({ children }) {
     const [token, setToken] = useState(localStorage.getItem('authorization') || '')
 
     useEffect(() => {
+        console.log('fetch')
         token &&
             fetch('http://localhost:3001/auth/verifytoken', {
                 method: 'POST',
