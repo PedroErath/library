@@ -4,8 +4,13 @@ import { CgDarkMode } from 'react-icons/cg'
 import { BiHeartCircle } from 'react-icons/bi'
 import HeaderCart from '../HeaderCart'
 import SearchBar from '../SearchBar'
+import { useContext } from 'react'
+import { UserContext } from '../../contexts/UserContext'
 
-export default function Header({ userLogged }) {
+export default function Header() {
+
+    const {userLogged} = useContext(UserContext)
+
     return (
         <header className="bg-amber-400 p-4" id='top'>
             <div className="max-w-screen-xl m-auto">
