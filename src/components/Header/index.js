@@ -11,6 +11,7 @@ export default function Header() {
 
     const {userLogged} = useContext(UserContext)
 
+
     return (
         <header className="bg-amber-400 p-4" id='top'>
             <div className="max-w-screen-xl m-auto">

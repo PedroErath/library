@@ -11,7 +11,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className='bg-amber-400 p-4 absolute w-full bottom-0'>
+        <footer className='bg-amber-400 p-4 w-full md:absolute md:bottom-0 '>
             <div className='flex flex-wrap items-center justify-center sm:justify-between m-auto max-w-screen-xl'>
                 <div className='text-center sm:text-left'>
                     <h1 className='text-3xl font-bold mb-3'>LIBRARY</h1>

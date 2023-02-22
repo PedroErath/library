@@ -39,19 +39,20 @@ export default function FormLogin() {
             <div className="text-center">
                 <h2 className="text-2xl font-bold">Login</h2>
             </div>
-            <form>
-                <TextInput setValue={e => setEmail(e.target.value)} label='Email' placeholder='Digite o email do usuário' type='email' />
-                <TextInput setValue={e => setPassword(e.target.value)} label='Senha' placeholder='Digite a senha do usuário' type='password' />
+            <form onSubmit={e => Login(e)}>
+                <TextInput setValue={e => setEmail(e.target.value)} label='Email' placeholder='Digite o email do usuário' type='email' $required/>
+                <TextInput setValue={e => setPassword(e.target.value)} label='Senha' placeholder='Digite a senha do usuário' type='password' $required />
+
+                {
+                    error.error &&
+                    <ReturnMessage error={error.error} setValue={e => setError({})}>
+                        {error.message}
+                    </ReturnMessage>
+                }
+                <Button type='submit'>
+                    ENTRAR
+                </Button>
             </form>
-            {
-                error.error &&
-                <ReturnMessage error={error} setValue={e => setError({})}>
-                   {error.message}
-                </ReturnMessage>
-            }
-            <Button onClick={e => Login(e)}>
-                ENTRAR
-            </Button>
         </section>
     )
 }

@@ -1,4 +1,4 @@
-import {createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const UserContext = createContext({})
 
@@ -8,7 +8,6 @@ export function UserProvider({ children }) {
     const [token, setToken] = useState(localStorage.getItem('authorization') || '')
 
     useEffect(() => {
-        console.log('fetch')
         token &&
             fetch('http://localhost:3001/auth/verifytoken', {
                 method: 'POST',
@@ -23,8 +22,8 @@ export function UserProvider({ children }) {
                 .catch(err => console.error(err));
     }, [token])
 
-    return(
-        <UserContext.Provider value={{userLogged, setToken}}>
+    return (
+        <UserContext.Provider value={{ userLogged, setToken }}>
             {children}
         </UserContext.Provider>
     )
